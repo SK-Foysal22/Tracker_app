@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		123C9CA02F4BCA35001B72B6 /* Tracker_app Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 123C9C9F2F4BCA35001B72B6 /* Tracker_app Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		123C9CD02F4C37B7001B72B6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 123C9CCF2F4C37B7001B72B6 /* WidgetKit.framework */; };
+		123C9CD22F4C37B7001B72B6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 123C9CD12F4C37B7001B72B6 /* SwiftUI.framework */; };
+		123C9CE12F4C37B8001B72B6 /* WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 123C9CCD2F4C37B7001B72B6 /* WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -17,6 +20,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 123C9C9E2F4BCA35001B72B6;
 			remoteInfo = "Tracker_app Watch App";
+		};
+		123C9CDF2F4C37B8001B72B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 123C9C932F4BCA35001B72B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 123C9CCC2F4C37B7001B72B6;
+			remoteInfo = WidgetExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -32,17 +42,49 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		123C9CE62F4C37B8001B72B6 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				123C9CE12F4C37B8001B72B6 /* WidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		123C9C992F4BCA35001B72B6 /* Tracker_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		123C9C9F2F4BCA35001B72B6 /* Tracker_app Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tracker_app Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		123C9CCD2F4C37B7001B72B6 /* WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		123C9CCF2F4C37B7001B72B6 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		123C9CD12F4C37B7001B72B6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		123C9CE22F4C37B8001B72B6 /* Exceptions for "Widget" folder in "WidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 123C9CCC2F4C37B7001B72B6 /* WidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		123C9CA32F4BCA35001B72B6 /* Tracker_app Watch App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Tracker_app Watch App";
+			sourceTree = "<group>";
+		};
+		123C9CD32F4C37B7001B72B6 /* Widget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				123C9CE22F4C37B8001B72B6 /* Exceptions for "Widget" folder in "WidgetExtension" target */,
+			);
+			path = Widget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -55,6 +97,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		123C9CCA2F4C37B7001B72B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				123C9CD22F4C37B7001B72B6 /* SwiftUI.framework in Frameworks */,
+				123C9CD02F4C37B7001B72B6 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -62,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				123C9CA32F4BCA35001B72B6 /* Tracker_app Watch App */,
+				123C9CD32F4C37B7001B72B6 /* Widget */,
+				123C9CCE2F4C37B7001B72B6 /* Frameworks */,
 				123C9C9A2F4BCA35001B72B6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,8 +124,18 @@
 			children = (
 				123C9C992F4BCA35001B72B6 /* Tracker_app.app */,
 				123C9C9F2F4BCA35001B72B6 /* Tracker_app Watch App.app */,
+				123C9CCD2F4C37B7001B72B6 /* WidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		123C9CCE2F4C37B7001B72B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				123C9CCF2F4C37B7001B72B6 /* WidgetKit.framework */,
+				123C9CD12F4C37B7001B72B6 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,10 +167,12 @@
 				123C9C9B2F4BCA35001B72B6 /* Sources */,
 				123C9C9C2F4BCA35001B72B6 /* Frameworks */,
 				123C9C9D2F4BCA35001B72B6 /* Resources */,
+				123C9CE62F4C37B8001B72B6 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				123C9CE02F4C37B8001B72B6 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				123C9CA32F4BCA35001B72B6 /* Tracker_app Watch App */,
@@ -118,6 +183,28 @@
 			productName = "Tracker_app Watch App";
 			productReference = 123C9C9F2F4BCA35001B72B6 /* Tracker_app Watch App.app */;
 			productType = "com.apple.product-type.application";
+		};
+		123C9CCC2F4C37B7001B72B6 /* WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 123C9CE32F4C37B8001B72B6 /* Build configuration list for PBXNativeTarget "WidgetExtension" */;
+			buildPhases = (
+				123C9CC92F4C37B7001B72B6 /* Sources */,
+				123C9CCA2F4C37B7001B72B6 /* Frameworks */,
+				123C9CCB2F4C37B7001B72B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				123C9CD32F4C37B7001B72B6 /* Widget */,
+			);
+			name = WidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = WidgetExtension;
+			productReference = 123C9CCD2F4C37B7001B72B6 /* WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -133,6 +220,9 @@
 						CreatedOnToolsVersion = 26.2;
 					};
 					123C9C9E2F4BCA35001B72B6 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					123C9CCC2F4C37B7001B72B6 = {
 						CreatedOnToolsVersion = 26.2;
 					};
 				};
@@ -153,6 +243,7 @@
 			targets = (
 				123C9C982F4BCA35001B72B6 /* Tracker_app */,
 				123C9C9E2F4BCA35001B72B6 /* Tracker_app Watch App */,
+				123C9CCC2F4C37B7001B72B6 /* WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -172,10 +263,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		123C9CCB2F4C37B7001B72B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		123C9C9B2F4BCA35001B72B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		123C9CC92F4C37B7001B72B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -189,6 +294,11 @@
 			isa = PBXTargetDependency;
 			target = 123C9C9E2F4BCA35001B72B6 /* Tracker_app Watch App */;
 			targetProxy = 123C9CA12F4BCA35001B72B6 /* PBXContainerItemProxy */;
+		};
+		123C9CE02F4C37B8001B72B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 123C9CCC2F4C37B7001B72B6 /* WidgetExtension */;
+			targetProxy = 123C9CDF2F4C37B8001B72B6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -405,6 +515,71 @@
 			};
 			name = Release;
 		};
+		123C9CE42F4C37B8001B72B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ac.uk.southwales.Tracker-app.watchkitapp.Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Debug;
+		};
+		123C9CE52F4C37B8001B72B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ac.uk.southwales.Tracker-app.watchkitapp.Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -431,6 +606,15 @@
 			buildConfigurations = (
 				123C9CB12F4BCA36001B72B6 /* Debug */,
 				123C9CB22F4BCA36001B72B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		123C9CE32F4C37B8001B72B6 /* Build configuration list for PBXNativeTarget "WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				123C9CE42F4C37B8001B72B6 /* Debug */,
+				123C9CE52F4C37B8001B72B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
